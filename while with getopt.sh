@@ -40,15 +40,15 @@ do
      esac        
 done
 
- if [[ -z ${userName} ]] ; then
+if [[-z ${userName}]] ; then
      echo "failed to get userName"    
      exit 1
 fi 
 
- if [[ -z ${passwd} ]] ; then
+if [[-z ${passwd}]] ; then
      echo "failed to get password"
      exit 2
- fi 
+fi 
 
  cat << EOF 
  userName=${userName}
