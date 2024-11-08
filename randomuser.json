@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Monsieur",
+        "first": "Friedrich",
+        "last": "Garcia"
+      },
+      "location": {
+        "street": {
+          "number": 3551,
+          "name": "Esplanade du 9 Novembre 1989"
+        },
+        "city": "Galgenen",
+        "state": "Schaffhausen",
+        "country": "Switzerland",
+        "postcode": 5440,
+        "coordinates": {
+          "latitude": "-64.2481",
+          "longitude": "-64.3509"
+        },
+        "timezone": {
+          "offset": "+9:00",
+          "description": "Tokyo, Seoul, Osaka, Sapporo, Yakutsk"
+        }
+      },
+      "email": "friedrich.garcia@example.com",
+      "login": {
+        "uuid": "55d52592-02d2-4ffc-85b5-522e726444c5",
+        "username": "redfrog436",
+        "password": "explorer",
+        "salt": "bi2h80XU",
+        "md5": "867a8622399385c67019b35602998de2",
+        "sha1": "e17a5c77cafda3d44247a61290c2d24ad3a4ad8f",
+        "sha256": "5f7db9f7bbf63dcd2a0c8718a67978736e94c6c5b62396e9794a88d09052502b"
+      },
+      "dob": {
+        "date": "1955-04-14T06:38:21.191Z",
+        "age": 69
+      },
+      "registered": {
+        "date": "2004-10-12T03:59:38.072Z",
+        "age": 20
+      },
+      "phone": "075 332 27 39",
+      "cell": "076 590 62 83",
+      "id": {
+        "name": "AVS",
+        "value": "756.1899.3159.60"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/91.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/91.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/91.jpg"
+      },
+      "nat": "CH"
+    }
+  ],
+  "info": {
+    "seed": "7738aae0942104f5",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}
