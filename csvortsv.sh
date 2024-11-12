@@ -1,15 +1,15 @@
 #!/bin/bash
 
-read -p "Enter desired Output Format: " input
+ read -p "enter desiredFrmat: " input
 
-if ["${input}" = csv]
+if [[ ${input} == "csv" ]]
 then
     jq -r '["nsName","creationDate"],(.items[]|[.metadata.name,.metadata.creationTimestamp])|@csv' <<< "$(kubectl get ns -o json)"
-elif ["${input}" = tsv]
+elif [[ ${input} == "tsv" ]]
 then
     jq -r '["nsName","creationDate"],(.items[]|[.metadata.name,.metadata.creationTimestamp])|@tsv' <<< "$(kubectl get ns -o json)"
 else
-    echo "Provide proper fileformat"
+    echo "Provide proper fileformat !!!"
     echo "<Usage>"
     echo "<csv> OR <tsv>"
 fi
