@@ -1,0 +1,23 @@
+[
+    {  
+        "id":1,
+        "name":"jenkins",
+        "usage":"integration"
+    },
+    {
+        "id":2,
+        "name":"stackstom",
+        "usage":"integration and event-driven automation"
+    },
+    {
+        "id":3,
+        "name":"bamboo",
+        "usage":"integration"
+    },
+    {
+        "id":4,
+        "name":"docker",
+        "usage":"container"
+    }
+]
+

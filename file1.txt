@@ -1,1 +1,2 @@
-hello world !!!
+jq -r '["id", "name", "usage"],(.[]|[.id, .name, .usage])| @csv' arrayofobjects.json
+jq -r '["id", "name", "usage"],(.[]|[.id, .name, .usage])| @tsv' arrayofobjects.json
