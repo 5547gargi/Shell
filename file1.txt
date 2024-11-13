@@ -1,2 +1,10 @@
 jq -r '["id", "name", "usage"],(.[]|[.id, .name, .usage])| @csv' arrayofobjects.json
 jq -r '["id", "name", "usage"],(.[]|[.id, .name, .usage])| @tsv' arrayofobjects.json
+
+
+head -5 file.txt
+tail -6 file.txt
+head -12 filr.txt | tail -6 file.txt
+
+awk 'NR>=6 && NR<=12 {print}' file.txt
+sed -n '6,12p' file.txt
