@@ -1,0 +1,11 @@
+myarray=()
+newarray=(4 5 8 3 "sit" "uat")
+customarray=([5]=47 [9]=45 [15]="scripting")
+declare -a mynewarray
+mynewarray=(1 2 3)
+
+declare -A myarray
+myarray=([name]="bash scripting" [version]=5.2.15)
+echo "${myarray[@]}" # to see all the array value
+echo "${!myarray[@]}" # to see the index values of the array
+
