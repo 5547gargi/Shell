@@ -1,0 +1,2 @@
+18.212.27.210 automation automation@123 date uptime
+18.212.185.2  tomcat tomcat123 whoami date
