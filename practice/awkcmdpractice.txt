@@ -1,0 +1,49 @@
+cat /etc/os-release
+NAME="Ubuntu"
+VERSION="20.04.6 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.6 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+
+cat /etc/os-release | awk -F = '{print $1}'
+NAME
+VERSION
+ID
+ID_LIKE
+PRETTY_NAME
+VERSION_ID
+HOME_URL
+SUPPORT_URL
+BUG_REPORT_URL
+PRIVACY_POLICY_URL
+VERSION_CODENAME
+UBUNTU_CODENAME
+
+awk  'NR==4' /etc/os-release
+ID_LIKE=debian
+
+awk '{a=$1 ; b=$2 ; print "a="a ,"b="b }' ab.txt 
+a=2 b=5
+a=4 b=6
+
+cat /etc/os-release | awk '/ID/{print $0}'
+ID=ubuntu
+ID_LIKE=debian
+VERSION_ID="20.04"
+
+cat /etc/os-release | awk 'NR==4 {print NR, $0}'
+4 ID_LIKE=debian
+
+cat /etc/os-release | awk 'NR==1, NR==5 {print NR, $0}'
+1 NAME="Ubuntu"
+2 VERSION="20.04.6 LTS (Focal Fossa)"
+3 ID=ubuntu
+4 ID_LIKE=debian
+5 PRETTY_NAME="Ubuntu 20.04.6 LTS"
