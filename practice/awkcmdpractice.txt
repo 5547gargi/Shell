@@ -47,3 +47,34 @@ cat /etc/os-release | awk 'NR==1, NR==5 {print NR, $0}'
 3 ID=ubuntu
 4 ID_LIKE=debian
 5 PRETTY_NAME="Ubuntu 20.04.6 LTS"
+
+cat /etc/os-release | awk '$1 ~ /ID/ {print NR, $0}'
+3 ID=ubuntu
+4 ID_LIKE=debian
+6 VERSION_ID="20.04"
+
+cat /etc/os-release | awk  'BEGIN{IGNORECASE=1} /id|home_url/ {print NR, $0}'
+3 ID=ubuntu
+4 ID_LIKE=debian
+6 VERSION_ID="20.04"
+7 HOME_URL="https://www.ubuntu.com/"
+
+ls -lt | awk 'NR>1 {print $NF}'
+awkcmdpractice.txt
+read_values.sh
+1stawkscript.awk
+
+awk 'BEGIN{sum=0} {sum=sum+$NF} END{print "SUM of salary: " sum}' sample.txt 
+SUM of salary: 5525.69
+
+awk '{sum=sum+$NF} END{print "SUM of salary: " sum}' sample.txt 
+SUM of salary: 5525.69
+
+awk '{count++} END{print "Total No Of Employess are : " count }' sample.txt 
+Total No Of Employess are : 10  # printing both header and empty lines
+
+awk 'NR>1 {if($NF>0)count++} END{print "Total No Of Employess are : " count }' sample.txt 
+Total No Of Employess are : 8  # required result
+
+awk 'NR>1 {if($NF>0)count++; sum+=$NF} END{print "Average salary : " sum/count}' sample.txt 
+Average salary : 625.433
