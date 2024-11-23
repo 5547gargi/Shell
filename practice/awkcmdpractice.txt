@@ -78,3 +78,54 @@ Total No Of Employess are : 8  # required result
 
 awk 'NR>1 {if($NF>0)count++; sum+=$NF} END{print "Average salary : " sum/count}' sample.txt 
 Average salary : 625.433
+
+awk 'NR>1 {if($NF>0)count++;sum+=$NF} END{print "Average salary : ₹" sum/count}' sample.txt # ctrl+alt+4 
+Average salary : ₹625.433
+
+awk '{} END{print "No of lines = " NR}' sample.txt 
+No of lines = 10
+
+awk '{print length($0)}' sample.txt  # print length of lines
+52 
+66
+63
+67
+60
+70
+75
+78
+71
+1
+
+awk '{if(length($0)>max)max=length($0)} END{print "Length of longest line is : " max}' sample.txt 
+Length of longest line is : 78
+
+awk '{print $NF}' sample.txt 
+salary
+852.38
+498.82
+99.35
+986.95
+344.32
+826.93
+862.09
+532.62
+
+
+awk '{if($NF>800)$7="High";else $7="Low";print $0}' sample.txt 
+id firstname lastname email profession salary High
+100 Fidelia Vharat Fidelia.Vharat@yopmail.com doctor 852.38 High
+101 Dolli Holtz Dolli.Holtz@yopmail.com developer 498.82 Low
+102 Maridel Sasnett Maridel.Sasnett@yopmail.com worker 99.35 Low
+103 Merry Oscar Merry.Oscar@yopmail.com doctor 986.95 High
+104 Tomasina Jalbert Tomasina.Jalbert@yopmail.com doctor 344.32 Low
+105 Brianna Lucienne Brianna.Lucienne@yopmail.com firefighter 826.93 High
+106 Konstance Wattenberg Konstance.Wattenberg@yopmail.com worker 862.09 High
+107 Dianemarie Colp Dianemarie.Colp@yopmail.com developer 532.62 Low
+      Low
+
+awk '{if($5=="doctor")sum=$NF} END{print "Total salary in doct. dept :₹"sum}' sample.txt 
+Total salary in doct. dept :₹344.32     # last doc salary
+
+awk '{if($5=="doctor")sum+=$NF} END{print "Total salary in doct. dept :₹"sum}' sample.txt 
+Total salary in doct. dept :₹2183.65    
