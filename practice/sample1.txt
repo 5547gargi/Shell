@@ -1,4 +1,6 @@
  id  firstname  lastname  email  profession  salary 
+----------------------------------------------------------------------------
+ 99   Tupa das Tupa.das@gmail.com devops 687.45
  100  Fidelia  Vharat  Fidelia.Vharat@yopmail.com  doctor  852.38 
  101  Dolli  Holtz  Dolli.Holtz@yopmail.com  developer  498.82 
  102  Maridel  Sasnett  Maridel.Sasnett@yopmail.com  worker  99.35 
@@ -7,3 +9,5 @@
  105  Brianna  Lucienne  Brianna.Lucienne@yopmail.com  firefighter  826.93 
  106  Konstance  Wattenberg  Konstance.Wattenberg@yopmail.com  worker  862.09 
  107  Dianemarie  Colp  Dianemarie.Colp@yopmail.com  developer  532.62 
+ 108 Krishna krishna radha.krishna@gmail.com supremeGod ₹∞
+-------------------------------------------------------------------------------

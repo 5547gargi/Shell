@@ -55,5 +55,10 @@ sed -n "/$sw_w/p" sample.txt.back
  sed -i.back 's/doctor/tester/g' sample1.txt # replacing doctor with tester permantely while taking backup
  sed 's/doctor/tester/2' sample1.txt # replacing doctor with tester in 2nd place when it appears not everywhere 
  sed '/Tomasina/s/doctor/tester/' sample1.txt # replacing doctor to tester where Tomasina is present only
-  sed -i '/Tomasina/s/doctor/tester/' sample1.txt # replacing doctor to tester where Tomasina is present permantely
-  
+ sed -i '/Tomasina/s/doctor/tester/' sample1.txt # replacing doctor to tester where Tomasina is present permantely
+ sed -i '1a --------------------' sample1.txt 
+ sed -i '$a --------------------' sample1.txt
+ sed -i '/Fidelia/i 99 Tupa das Tupa.das@gmail.com devops 687.45' sample1.txt 
+ sed -i '/Dianemarie/a 108 Krishna krishna radha.krishna@gmail.com supremeGod ₹∞' sample1.txt
+ sed '3d' sample1.txt # deletinh 3rd line
+ 
