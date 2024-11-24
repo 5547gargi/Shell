@@ -34,3 +34,26 @@ sed -n '$p' sample.txt # for last line
  103  Merry  Oscar  Merry.Oscar@yopmail.com  doctor  986.95 
  105  Brianna  Lucienne  Brianna.Lucienne@yopmail.com  firefighter  826.93 
  107  Dianemarie  Colp  Dianemarie.Colp@yopmail.com  developer  532.62
+
+sw_w=doctor
+sed -n "/$sw_w/p" sample.txt.back 
+ 100  Fidelia  Vharat  Fidelia.Vharat@yopmail.com  doctor  852.38 
+ 103  Merry  Oscar  Merry.Oscar@yopmail.com  doctor  986.95 
+ 104  Tomasina  Jalbert  Tomasina.Jalbert@yopmail.com  doctor  344.32 
+
+ sed '2,$d' sample.txt.back 
+ id  firstname  lastname  email  profession  salary
+ 
+ sed '8,$!d' sample.txt.back 
+ 106  Konstance  Wattenberg  Konstance.Wattenberg@yopmail.com  worker  862.09 
+ 107  Dianemarie  Colp  Dianemarie.Colp@yopmail.com  developer  532.62
+
+ sed -i.back '/doctor/d' sample.txt # deleting lines having doctor
+ sed -i.back '/doctor/!d' sample.txt # deleting lines not having doctor
+
+ sed 's/doctor/tester/g' sample1.txt # replacing doctor with tester
+ sed -i.back 's/doctor/tester/g' sample1.txt # replacing doctor with tester permantely while taking backup
+ sed 's/doctor/tester/2' sample1.txt # replacing doctor with tester in 2nd place when it appears not everywhere 
+ sed '/Tomasina/s/doctor/tester/' sample1.txt # replacing doctor to tester where Tomasina is present only
+  sed -i '/Tomasina/s/doctor/tester/' sample1.txt # replacing doctor to tester where Tomasina is present permantely
+  
