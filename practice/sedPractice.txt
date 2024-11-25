@@ -61,4 +61,18 @@ sed -n "/$sw_w/p" sample.txt.back
  sed -i '/Fidelia/i 99 Tupa das Tupa.das@gmail.com devops 687.45' sample1.txt 
  sed -i '/Dianemarie/a 108 Krishna krishna radha.krishna@gmail.com supremeGod ₹∞' sample1.txt
  sed '3d' sample1.txt # deletinh 3rd line
- 
+
+sed -n '/p[you]t/p' sample.txt
+sed -n '/p[a-y]t/p' sample.txt
+sed -n '/p[a-de-jk-r]t/p' sample.txt
+
+sed -n '/This\{3\}/p' sample.txt # finding thisss
+sed -n '/This\{3\}\b/p' sample.txt # finding only thisss word
+sed -n '/This\{3,4\}\b/p' sample.txt
+sed -n '/This\{3,\}\b/p' sample.txt
+
+sed -n '/\(This\)\{3\}/p' sample.txt # finding This for 3 times i,e ThisThisThis
+sed -n '/\(This\)\+/p' sample.txt # finding This for 1 time or more than 1 time
+sed -n '/\b\(This\)\+/p' sample.txt # finding This word only 1 time or more than 1 time
+
+
