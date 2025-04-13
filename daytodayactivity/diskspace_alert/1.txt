@@ -1,0 +1,12 @@
+
+Prerequisites:
+AWS Account with Ubuntu 24.04 LTS EC2 Instance.
+Basic knowledge of Shell scripting.
+Step #1:Generate the App Password
+Step #2: Create a file in Ubuntu
+nano diskspace_alert.sh
+Step #3: Write a Script to Monitor Disk Space Utilization and Send Email Alerts
+Step #4: Make file executable
+chmod +x diskspace_alert.sh
+Step #5: Run the script
+./diskspace_alert.sh
