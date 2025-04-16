@@ -1,0 +1,16 @@
+Topic: Shell Script to renew SSL Certificate
+
+Prerequisites:
+AWS Account with Ubuntu 24.04 LTS EC2 Instance.
+Basic knowledge of Shell scripting
+Step #1: Install Certbot on Ubuntu
+sudo apt update
+sudo apt install certbot python3-certbot-nginx
+Step #2: Create a file in Ubuntu
+nano ssl.sh
+Step #2: Write Shell script for SSL Certificate Renewal
+Step #3: Make file executable
+chmod +x ssl.sh
+Step #4: Run the script
+sudo ./ssl.sh
+sudo cat /var/log/certbot-renewal.log

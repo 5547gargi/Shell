@@ -1,5 +1,3 @@
-# To Monitor the disk_space utilization and  send email
-
 #!/usr/bin/env bash
 
 #Function to check root(/) disk space

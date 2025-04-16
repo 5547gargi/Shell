@@ -1,4 +1,4 @@
-
+Topic: To Monitor the disk_space utilization and  send email
 Prerequisites:
 AWS Account with Ubuntu 24.04 LTS EC2 Instance.
 Basic knowledge of Shell scripting.
