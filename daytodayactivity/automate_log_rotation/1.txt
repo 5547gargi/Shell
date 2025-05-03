@@ -1,0 +1,40 @@
+Topic: Shell Script to automate log rotation
+
+Prerequisites:
+AWS Account with Ubuntu 24.04 LTS EC2 Instance.
+Basic knowledge of Shell scripting.
+
+Step #1: Install MongoDB on Ubuntu
+sudo apt update
+copying mogodb gpg key:- 
+curl -fSSL https://www.mongodb.org/static/pgp/server-7.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg \ 
+   --dearmor
+echo "deb [ arch-amd64, arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/source.list.d/mongodb-org-7.0.list
+sudo apt-get update
+sudo apt-get install -y mongodb-org
+sudo systemctl daemon-reload
+sudo systemctl enable mongod
+sudo systemctl start mongod
+sudo systemctl status mongod
+
+Step #2:Set Up MongoDB Authentication
+mongosh
+ use admin
+ db.createUser({
+   user: "Bijayalaxmi", pwd: "Tupa",
+   roles: [ {role: "userAdminAnyDatabase", db: "admin" }, {role: "dbAdminAnyDatabase", db: "admin"}, {role: "readWriteAnyDatabase", db: "admin"} ]
+   })
+exit
+
+step #3: create the Script file
+nano log_rotate.share
+
+step #4: Write the script
+
+step #5: Set up Environment variables
+
+export MANGODB_USERNAME="Bijayalaxmi"
+export MANGODB_PASSWORD="Tupa"
+
+step #6: Make the Script Executable
