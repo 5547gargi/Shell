@@ -1,0 +1,10 @@
+Topic: How to purge system Cache in a Linux environment.
+Prerequisites:
+AWS Account with Ubuntu 24.04 LTS EC2 Instance. Basic knowledge of shell scripting.
+step #1: Create a file in Ubuntu
+nano free_cache.sh
+Step #2:Write shell script for Cache Purging
+Step #3: Make file executable
+chmod +x free_cache.sh
+Step #4: Run the script
+sudo ./free_cache.sh
