@@ -1,0 +1,16 @@
+Topic: Parse and Delete linux logs using shellscript
+
+Prerequisites:
+AWS Account with Ubuntu 24.04 LTS EC2 Instance.
+Basic knowledge of Shell scripting.
+
+Step #1: Create the script for parsing logs
+vi logfile.sh
+chmod +x logfile.sh
+./ logfile.sh
+f
+Step #2: Create the script to delete logs
+vi logdelete.sh
+chmod +x logdelete.sh
+sudo ./logdelete.sh
+./logfile.sh
