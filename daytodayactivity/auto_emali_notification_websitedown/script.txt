@@ -1,0 +1,18 @@
+Topic: Automatic Email Notification for URL status using shell scripting
+
+Prerequisites:
+AWS Account with Ubuntu 24.04 LTS EC2 Instance.
+Basic knowledge of Shell scripting.
+
+Step #1: Generate the App password (from your google account)
+
+Step #2: create a file in the linux machine
+vi url_notification.sh
+
+Step #3: write a scipt to send an Email
+
+Step #4: make the file executable
+chmod +x url_notification.sh
+
+step #5: Run the script
+./url_notification.sh
