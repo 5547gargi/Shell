@@ -1,0 +1,56 @@
+Topic: Automatic Mysql Db backup  using shell scripting
+
+Prerequisites:
+AWS Account with Ubuntu 24.04 LTS EC2 Instance.
+Basic knowledge of Shell scripting.
+
+Step #1: Install Mysql on Ubuntu
+sudo apt update -y
+sudo apt install mysql-server -y
+sudo systemctl status mysql
+
+Step #2: Create Mysql database and user
+sudo mysql -u root
+ CREATE DATABASE mydb;
+ use mydb;
+ CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY_KEY,
+    name VARCHAR(100) NOT NULL,
+    position VARCHAR(100),
+    salary DECIMAL(10, 2),
+    hairing_date DATE
+ );
+ INSERT INTO employees (name, position, salary, hairing_date) VALUES
+ ('Ram', 'Software Engineer', 250000, '2022-02-12'),
+ ('Sita', 'Project Manager', 750000, '2021-01-22'),
+ ('Hari', 'Data Analyst', 650000, '2023-04-18');
+ SELECT * FROM emplyees
+ CERETE USER 'Bijayalaxmi' IDENTIFIED BY 'devops';
+ GRANT ALL PRIVILAGES ON mydb.* TO 'Bijayalaxmi';
+ GRANT PROCESS ON *.* TO 'Bijayalaxmi';
+ flush privilages;
+ exit
+
+STEP #3: Crate Mysql DATABASE backup using Shell Script
+nano backup.sh
+Chmod +x backup.sh
+./backup.sh
+cd mysql_backup
+ls
+
+STEP #4: Restore the backup data using Shell Script
+nano restore_backup.sh
+sudo mysql -u root
+ GRANT ALL PRIVILAGES ON mydb_backup.* TO 'Bijayalaxmi';
+ GRANT PROCESS ON *.* TO 'Bijayalaxmi';
+ flush privilages;
+ exit
+chmod +x restore_backup.sh
+./restore_backup.sh
+mysql -u Bijayalaxmi -p
+USE mydb_backup;
+SHOW TABLES;
+SELECT * FROM employees;
+
+ 
+
