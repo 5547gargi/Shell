@@ -1,0 +1,10 @@
+Topic: monitoring (CPU consumption, meoemory uses, disk sapce) Linux Servers using shell scripting
+
+Prerequisites:
+AWS Account with Ubuntu 24.04 LTS EC2 Instance.
+Basic knowledge of Shell scripting.
+
+Step #1: Crete a file in your linux machine
+nano script.sh
+chmod +x script.sh
+./script.sh
