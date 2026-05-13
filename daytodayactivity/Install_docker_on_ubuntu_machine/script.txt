@@ -1,0 +1,16 @@
+Topic: Install Docker using shell scripting
+
+SHELL:
+.BASH
+.PYTHON
+.SH
+.ZSH
+
+Prerequisites:
+AWS Account with Ubuntu 24.04 LTS EC2 Instance.
+Basic knowledge of Shell scripting.
+
+Step #1: Crete a file in your linux machine
+vi Docker.sh
+chomd +x Docker.sh
+./Docker.sh
